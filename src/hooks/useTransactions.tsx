@@ -58,14 +58,10 @@ export const TransactionsProvider: React.FC = ({ children }) => {
   );
 
   const removeTransactions = useCallback((transactionId: number) => {
-    console.log("transactionId", transactionId);
-
     setTransactions((state) =>
       state.filter((transaction) => transactionId !== transaction.id)
     );
   }, []);
-
-  console.log("awui", transactions);
 
   return (
     <TransactionsContext.Provider
